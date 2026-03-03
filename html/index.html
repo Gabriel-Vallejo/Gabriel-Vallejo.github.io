@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es" data-theme="light" data-assets-path="../assets/" data-layout-path="free-landing-page/" dir="ltr" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Gabriel Vallejo | Experto en Automatización IA & n8n</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/dist/libs/flatpickr/dist/flatpickr.css" />
+    <link rel="stylesheet" href="../assets/dist/css/output.css" />
+
+    <script type="text/javascript">
+      // Script de tema (Mantenido del original)
+      (function () {
+        try {
+          const root = document.documentElement;
+          const layoutPath = root.getAttribute('data-layout-path')?.replace('/', '') || 'dashboard-default';
+          const localStorageKey = `${layoutPath}-theme`;
+          window.THEME_CONFIG = { 'free-landing-page': { default: 'light', light: 'light', dark: 'dark', system: { light: 'light', dark: 'dark' } } };
+          const getSystemPreference = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const resolveTheme = (selectedTheme, layoutPath) => {
+            const layoutConfig = window.THEME_CONFIG[layoutPath];
+            if (!layoutConfig) return selectedTheme === 'system' ? (getSystemPreference() ? 'dark' : 'light') : selectedTheme;
+            if (selectedTheme === 'system') {
+              const systemConfig = layoutConfig.system;
+              return getSystemPreference() ? systemConfig.dark : systemConfig.light;
+            }
+            return layoutConfig[selectedTheme] || selectedTheme || layoutConfig.default || 'light';
+          };
+          const savedTheme = localStorage.getItem(localStorageKey) || 'system';
+          root.setAttribute('data-theme', resolveTheme(savedTheme, layoutPath));
+        } catch (e) { console.warn('Early theme script error:', e); }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div class="bg-base-100">
+      <header class="border-base-content/20 bg-base-100 py-0.25 fixed top-0 z-10 w-full border-b">
+        <nav class="navbar mx-auto max-w-[1280px] rounded-b-xl px-4 sm:px-6 lg:px-8">
+          <div class="w-full lg:flex lg:items-center lg:gap-2">
+            <div class="navbar-start items-center justify-between max-lg:w-full">
+              <a class="text-base-content flex items-center gap-3 text-xl font-semibold" href="#">
+                <span class="text-primary icon-[tabler--cpu] size-8"></span>
+                <span>Gabriel Automations</span>
+              </a>
+            </div>
+            <div id="navbar-block-4" class="lg:navbar-center transition-height collapse hidden grow overflow-hidden font-medium duration-300 lg:flex">
+              <div class="text-base-content flex gap-6 text-base max-lg:mt-4 max-lg:flex-col lg:items-center">
+                <a href="#home" class="hover:text-primary nav-link">Inicio</a>
+                <a href="#services" class="hover:text-primary nav-link">Servicios</a>
+                <a href="#contact-us" class="hover:text-primary nav-link">Auditoría Gratis</a>
+              </div>
+            </div>
+            <div class="navbar-end max-lg:hidden">
+              <a href="#contact-us" class="btn btn-primary">Empezar Ahora</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section id="home">
+          <div class="gap-18 md:pt-45 lg:gap-35 lg:pt-47.5 flex h-full flex-col justify-between py-8 pt-40 sm:py-16 md:gap-24 lg:py-24">
+            <div class="mx-auto flex max-w-[1280px] flex-col items-center gap-6 justify-self-center px-4 text-center sm:px-6 lg:px-8">
+              <div class="bg-base-200 border-base-content/20 w-fit rounded-full border px-3 py-1">
+                <span> Ingeniería Informática @ USAL 🎓</span>
+              </div>
+              <h1 class="text-base-content z-1 relative text-5xl font-bold leading-[1.15] max-md:text-2xl md:max-w-3xl">
+                Escala tu negocio.<br />La IA trabaja, tú creces.
+              </h1>
+              <p class="text-base-content/80 max-w-3xl text-xl">
+                Ahorra +10h semanales eliminando tareas repetitivas. Diseño flujos con <b>n8n</b> y <b>Agentes de IA</b> personalizados para tu empresa.
+              </p>
+              <a href="#contact-us" class="btn btn-primary btn-gradient btn-lg">
+                Solicitar Auditoría Gratis
+                <span class="icon-[tabler--arrow-right] size-5"></span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="services">
+          <div class="bg-base-100 py-8 sm:py-16 lg:py-24">
+            <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+              <div class="mb-12 space-y-4 text-center sm:mb-16 lg:mb-24">
+                <h2 class="text-base-content text-2xl font-semibold md:text-3xl lg:text-4xl">Soluciones de Ingeniería para tu Negocio</h2>
+              </div>
+              <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="card card-border shadow-none">
+                  <div class="card-body gap-3">
+                    <span class="icon-[tabler--robot] text-primary size-12"></span>
+                    <h5 class="card-title text-xl">Agentes de Venta IA</h5>
+                    <p>Clasificación automática de leads y respuestas inteligentes 24/7 integradas con tu WhatsApp o Email.</p>
+                  </div>
+                </div>
+                <div class="card card-border shadow-none">
+                  <div class="card-body gap-3">
+                    <span class="icon-[tabler--database-share] text-primary size-12"></span>
+                    <h5 class="card-title text-xl">Sincronización de Datos</h5>
+                    <p>Conecto tus herramientas (Excel, CRM, Facturación) para que los datos fluyan sin errores manuales.</p>
+                  </div>
+                </div>
+                <div class="card card-border shadow-none">
+                  <div class="card-body gap-3">
+                    <span class="icon-[tabler--file-text] text-primary size-12"></span>
+                    <h5 class="card-title text-xl">Gestión de Facturas</h5>
+                    <p>Extracción automática de datos de PDFs y facturas directamente a tu contabilidad usando OCR e IA.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact-us">
+          <div class="bg-base-200 py-8 sm:py-16 lg:py-24">
+            <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+              <div class="mb-12 text-center sm:mb-16 lg:mb-24">
+                <h2 class="text-base-content mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl">Hablemos de tu Proyecto</h2>
+                <p class="text-base-content/80 text-xl">Analizaré tu caso personalmente y te enviaré una propuesta de automatización.</p>
+              </div>
+              <div class="card shadow-md bg-base-100">
+                <div class="card-body">
+                  <form class="space-y-6" id="n8n-form">
+                    <div class="flex gap-6 max-md:flex-col">
+                      <div class="w-full">
+                        <label class="label-text" for="username">Nombre</label>
+                        <div class="input input-lg">
+                          <input type="text" class="grow" placeholder="Tu nombre..." id="username" required />
+                        </div>
+                      </div>
+                      <div class="w-full">
+                        <label class="label-text" for="userphone">WhatsApp / Teléfono</label>
+                        <div class="input input-lg">
+                          <input type="text" class="grow" placeholder="+34 600 000 000" id="userphone" required />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <label class="label-text" for="usermessage">¿Qué proceso quieres automatizar?</label>
+                      <div class="textarea">
+                        <textarea class="grow resize-none" placeholder="Cuéntame brevemente qué tareas te quitan más tiempo..." id="usermessage" rows="4"></textarea>
+                      </div>
+                    </div>
+                    <button type="submit" id="submit-btn" class="btn btn-primary btn-gradient w-full">Enviar Solicitud</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="py-8 text-center border-t border-base-content/10">
+        <p>&copy; 2026 Juan Automations. Estudiante de Ingeniería Informática - USAL.</p>
+        <p class="text-sm text-base-content/50 mt-2">Sistemas de alta disponibilidad alojados en VPS Privado.</p>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('n8n-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('submit-btn');
+        btn.innerText = "Enviando...";
+        btn.disabled = true;
+
+        const data = {
+          nombre: document.getElementById('username').value,
+          telefono: document.getElementById('userphone').value,
+          mensaje: document.getElementById('usermessage').value,
+          fuente: 'Web Portfolio'
+        };
+
+        try {
+          // REEMPLAZA ESTA URL POR TU WEBHOOK DE n8n
+          const response = await fetch('https://n8n.tudominio.com/webhook/contacto', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+          });
+
+          if(response.ok) {
+            alert('¡Enviado con éxito! Te contactaré muy pronto.');
+            document.getElementById('n8n-form').reset();
+          } else {
+            alert('Error en el servidor. Inténtalo de nuevo.');
+          }
+        } catch (error) {
+          alert('No se pudo conectar con el servidor de automatización.');
+        } finally {
+          btn.innerText = "Enviar Solicitud";
+          btn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>
